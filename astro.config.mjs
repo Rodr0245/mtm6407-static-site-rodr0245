@@ -7,6 +7,6 @@ export default defineConfig({
   output: 'static', 
   site: 'https://rodr0245.github.io/mtm6407-static-site-rodr0245', // Correct URL for GitHub Pages
   build: {
-    emptyOutputDir: true,
+    out: './dist',  // Ensure the output directory is set to 'dist'
   },
 });
