@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const { title = "My Photography Portfolio" } = Astro.props;
+---
+
+<BaseLayout title={`Welcome to ${title}`}>
+  <header
+    id="banner"
+    class="h-[calc(100vh-10rem)] bg-cover bg-no-repeat bg-center flex items-end"
+    style={{ backgroundImage: "url('images/cd.jpg')" }}
+  >
+    <div class="container mx-auto p-6 text-white flex flex-col gap-4 mb-12">
+      <h1 class="text-6xl font-bold">{title}</h1>
+      <p class="text-2xl font-semibold">Nicolas Ortiz</p>
+    </div>
+  </header>
+  <main class="container mx-auto p-6 flex flex-col md:flex-row gap-6 mt-12">
+    <section class="flex-1 bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-3xl font-bold text-gray-900">About Me</h2>
+      <p class="text-gray-700 my-4">
+        Hi, my name is Nicolas Ortiz and I am a photographer based in Ottawa,
+        Ontario. I have a passion for capturing the beauty of the world around
+        us and sharing it with others.
+      </p>
+      <p class="text-gray-700 my-4">
+        I have been taking photos for over 4 years and have honed my skills
+        through extensive travel and experience working with various clients.
+      </p>
+      <a
+        href="/about"
+        class="inline-block mt-4 px-6 py-2 bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-600 transition-colors duration-300"
+        >Learn More</a
+      >
+    </section>
+    <section class="flex-1">
+      <h2 class="text-3xl font-bold">Recent Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img
+          src="/images/cd.jpg"
+          alt="Recent Work 1"
+          class="rounded-md shadow-lg transform transition-transform duration-500 hover:scale-105"
+        />
+        <img
+          src="/images/laptop.jpg"
+          alt="Recent Work 2"
+          class="rounded-md shadow-lg transform transition-transform duration-500 hover:scale-105"
+        />
+        <img
+          src="/images/kiwi.jpg"
+          alt="Recent Work 3"
+          class="rounded-md shadow-lg transform transition-transform duration-500 hover:scale-105"
+        />
+        <img
+          src="/images/forest-4.jpg"
+          alt="Recent Work 4"
+          class="rounded-md shadow-lg transform transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <a
+        href="/gallery"
+        class="inline-block mt-4 px-6 py-2 bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-600 transition-colors duration-300"
+        >View All Work</a
+      >
+    </section>
+  </main>
+</BaseLayout>
