@@ -1,0 +1,44 @@
+---
+// Layout metadata
+const { title = "My Business Site" } = Astro.props;
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 font-sans text-gray-900">
+    <!-- Header -->
+    <header>
+      <!-- Navigation Bar -->
+      <Navigation />
+    </header>
+
+    <!-- Main Content -->
+    <main>
+			
+			<section class="bg-black text-white py-12">
+				<div class="container mx-auto px-6 lg:px-12 text-center">
+					<h2 class="text-3xl font-semibold">My Photography</h2>
+					<p class="mt-4">
+						Here are some of my favorite photos from my portfolio. Check out my gallery section to see more.
+					</p>
+				</div>
+			</section>
+			
+				
+      <slot />
+      <!-- Content goes here -->
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>

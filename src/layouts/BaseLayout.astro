@@ -1,0 +1,31 @@
+---
+// Layout metadata
+const { title = "My Business Site" } = Astro.props;
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navigation Bar -->
+		<Navigation />
+
+    <!-- Main Content -->
+    <main>
+      <!-- Content passed to the layout -->
+      <slot />
+    </main>
+
+    <!-- Footer -->
+		<Footer />
+  </body>
+</html>
