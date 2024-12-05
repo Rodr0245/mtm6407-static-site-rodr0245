@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build:gh-page": "astro check && astro build --base=/your-project-name/",
     "preview": "astro preview"
+
   },
 
   "dependencies": {
